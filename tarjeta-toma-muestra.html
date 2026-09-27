@@ -166,7 +166,7 @@
   /* Animaciones: solo en el paso visible */
   .step.active .rub-l{animation:rubL .7s ease-in-out infinite}
   .step.active .rub-r{animation:rubR .7s ease-in-out infinite}
-  .step.active .arm{transform-box:view-box;transform-origin:252px 52px;animation:swing 2.4s ease-in-out infinite}
+  .step.active .arm{transform-box:view-box;transform-origin:252px 56px;animation:swing 2.4s ease-in-out infinite}
   .step.active .hand-open{animation:handOpen 2s steps(1,end) infinite}
   .step.active .hand-fist{animation:handFist 2s steps(1,end) infinite}
   .step.active .chev{animation:chev 1.4s ease-in infinite}
@@ -176,7 +176,7 @@
   .step.active .ok-zone{animation:blink 1.6s ease-in-out .9s infinite}
   .step.active .drop4{transform-box:fill-box;transform-origin:50% 0;animation:drop4 6s ease-in-out infinite}
   .step.active .gauze4{animation:gauze4 6s ease-in-out infinite}
-  .step.active .press5{transform-box:fill-box;transform-origin:center;animation:press5 5s ease-in-out infinite}
+  .step.active .press5{transform-box:fill-box;transform-origin:50% 0;animation:press5 5s ease-in-out infinite}
   .step.active .drop5{transform-box:fill-box;transform-origin:50% 0;animation:drop5 5s ease-out infinite}
   .step.active .samp5{animation:samp5 5s ease-in-out infinite}
   .step.active .fill5{transform-box:fill-box;transform-origin:0 50%;animation:fill5 5s ease-in-out infinite}
@@ -191,7 +191,7 @@
   @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
   @keyframes drop4{0%{transform:scale(0);opacity:1}18%{transform:scale(1)}38%{transform:scale(1);opacity:1}46%{transform:scale(.3);opacity:0}100%{transform:scale(0);opacity:0}}
   @keyframes gauze4{0%,20%{transform:translate(0,0);opacity:1}37%,46%{transform:translate(83px,0)}52%{transform:translate(83px,4px)}74%{transform:translate(75px,72px);opacity:1}84%{transform:translate(75px,84px);opacity:0}100%{transform:translate(0,0);opacity:0}}
-  @keyframes press5{0%,40%,100%{opacity:1;transform:scale(1)}10%,30%{opacity:.25;transform:scale(.8)}20%{opacity:1;transform:scale(1.1)}}
+  @keyframes press5{0%,40%,100%{opacity:1;transform:translateY(0)}10%,30%{opacity:.3;transform:translateY(-6px)}20%{opacity:1;transform:translateY(4px)}}
   @keyframes drop5{0%{transform:scale(.25)}45%,100%{transform:scale(1)}}
   @keyframes samp5{0%,45%{transform:translateX(46px)}62%,100%{transform:translateX(0)}}
   @keyframes fill5{0%,62%{transform:scaleX(0)}90%,100%{transform:scaleX(1)}}
@@ -232,7 +232,7 @@
       </div>
       <div class="eyebrow"><span class="dot"></span> Guía para el equipo</div>
       <h1 class="title">Toma de <em>muestra</em></h1>
-      <p class="sub">Punción capilar para tu prueba de inflamación</p>
+      <p class="sub">Punción capilar para la prueba de inflamación</p>
       <div class="beam" aria-hidden="true"></div>
     </header>
 
@@ -328,10 +328,10 @@
               <!-- b) brazo colgando -->
               <circle cx="232" cy="30" r="10" fill="#2B3A47"/>
               <path d="M232 40v44" stroke="#2B3A47" stroke-width="6" stroke-linecap="round"/>
-                            <path d="M300 38c-3-6-12-4-10 3 1 4 10 9 10 9s9-5 10-9c2-7-7-9-10-3z" fill="#B3322C"/>
-              <path d="M214 50h110" stroke="#B3322C" stroke-width="1" stroke-dasharray="3 3" opacity=".6"/>
-              <g class="arm"><path d="M252 52v28" stroke="#2B3A47" stroke-width="5" stroke-linecap="round"/><circle cx="252" cy="84" r="6" fill="#F1DCCB" stroke="#B98F74" stroke-width="1.5"/></g>
-              <path d="M236 50l16 2" stroke="#2B3A47" stroke-width="5" stroke-linecap="round"/>
+                            <path d="M242 48h84" stroke="#B3322C" stroke-width="1" stroke-dasharray="3 3" opacity=".6"/>
+              <g class="arm"><path d="M252 56v26" stroke="#2B3A47" stroke-width="5" stroke-linecap="round"/><circle cx="252" cy="86" r="6" fill="#F1DCCB" stroke="#B98F74" stroke-width="1.5"/></g>
+              <path d="M236 54l16 2" stroke="#2B3A47" stroke-width="5" stroke-linecap="round"/>
+              <path d="M233 44c-2-4-8-3-7 2 1 3 7 7 7 7s6-4 7-7c1-5-5-6-7-2z" fill="#B3322C" stroke="#F9FBFA" stroke-width="1"/>
               <text x="269" y="102" text-anchor="middle" class="cap">Brazo abajo · 30–60 s</text>
               <!-- c) puño -->
               <g class="hand-open" stroke="#B98F74" stroke-width="1.5" fill="#F1DCCB">
@@ -397,8 +397,8 @@
               <text x="80" y="247" text-anchor="middle" class="capb">✓ medio o anular</text>
               <!-- conexión al zoom -->
               <g class="link3">
-                <circle cx="91" cy="54" r="7" fill="none" stroke="#0A7D73" stroke-width="1.5"/>
-                <path d="M98 56L180 89" stroke="#0A7D73" stroke-width="1.2" stroke-dasharray="4 3"/>
+                <ellipse cx="96.5" cy="57" rx="3" ry="4.5" fill="rgba(15,181,168,.45)" stroke="#0A7D73" stroke-width="1.4"/>
+                <path d="M99.5 58L180 89" stroke="#0A7D73" stroke-width="1.2" stroke-dasharray="4 3"/>
               </g>
               <!-- zoom a la yema del dedo medio -->
               <g class="zoom">
@@ -499,8 +499,8 @@
               <path d="M118 22c11 4 25 4 36 0M118 40c11 4 25 4 36 0" fill="none" stroke="#D9B8A0" stroke-width="1.2"/>
               <!-- presión suave desde la base -->
               <g class="press5" fill="none" stroke="#0FB5A8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M78 10l22 22M100 20v12H88"/>
-                <path d="M194 10l-22 22M172 20v12h12"/>
+                <path d="M96 10v44M90.5 48.5l5.5 6.5 5.5-6.5"/>
+                <path d="M176 10v44M170.5 48.5l5.5 6.5 5.5-6.5"/>
               </g>
               <text x="136" y="196" text-anchor="middle" class="cap">presión suave, sin exprimir</text>
               <!-- gota -->
@@ -609,6 +609,7 @@
     </section>
 
     <footer class="foot">
+      <p class="care">Guía interna del equipo Endo &amp; Laser</p>
       <div class="rule"></div>
       <div class="sig">Dr. Isaac Kably M., <b>DDS, MSc</b></div>
       <div class="sig-role">Endo &amp; Laser Specialist</div>
