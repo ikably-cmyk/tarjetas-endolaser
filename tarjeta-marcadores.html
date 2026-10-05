@@ -139,6 +139,9 @@ footer{margin-top:8px;padding-top:6px;border-top:1px solid var(--linea);font-siz
   li{grid-template-columns:56px 1fr}
 }
 
+.enlace-guia{color:var(--acero);text-decoration:underline}
+.url-print{display:none}
+
 @page{size:5.5in 8.5in;margin:0}
 @media print{
   body{background:#fff}
@@ -146,6 +149,8 @@ footer{margin-top:8px;padding-top:6px;border-top:1px solid var(--linea);font-siz
   .cara{max-width:none;width:5.5in;height:8.5in;margin:0;border-radius:0;box-shadow:none;padding:.32in .3in .26in .38in;page-break-after:always;break-after:page}
   .cara:last-child{page-break-after:auto;break-after:auto}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .enlace-guia{display:none}
+  .url-print{display:inline}
 }
 </style>
 </head>
@@ -240,7 +245,7 @@ footer{margin-top:8px;padding-top:6px;border-top:1px solid var(--linea);font-siz
     <p class="aviso">El 2 en 1 sustituye al cartucho de PCR: no se hacen los dos.</p>
   </div>
 
-  <footer><span>Guía de punción: ikably-cmyk.github.io/tarjetas-endolaser/tarjeta-toma-muestra.html</span></footer>
+  <footer><span>Guía de punción: <a class="enlace-guia" href="https://ikably-cmyk.github.io/tarjetas-endolaser/tarjeta-toma-muestra.html">Abrir la guía de punción</a><span class="url-print">https://ikably-cmyk.github.io/tarjetas-endolaser/tarjeta-toma-muestra.html</span></span></footer>
 </section>
 
 </body>
